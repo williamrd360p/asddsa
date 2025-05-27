@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+    function Nome() {
+        let nome = document.getElementById("Nome").value;
+    
+        // Remove conectores comuns (com espaço para não pegar dentro das palavras)
+        nome = nome.replace(" de ", " ");
+        nome = nome.replace(" da ", " ");
+        nome = nome.replace(" do ", " ");
+        nome = nome.replace(" das ", " ");
+        nome = nome.replace(" dos ", " ");
+    
+        // Variáveis para guardar posição do último espaço
+        let posUltimoEspaco = -1;
+    
+    
+        // Exibe resultado
+        document.getElementById("resultado").innerHTML = ultimoNome + ", " + restoNome;
+    }
+
+    </script>
+</head>
+<body>
+    <input type="text" name="Nome" id="Nome">
+<button onclick="Nome()">Nome</button><br><br>
+</body>
+</html>
